@@ -4,6 +4,7 @@ import { Container } from "../components/ui/Container";
 import { SectionHeading } from "../components/ui/SectionHeading";
 import { Reveal } from "../components/ui/Reveal";
 import { Button } from "../components/ui/Button";
+import { InstagramIcon } from "../components/ui/SocialIcons";
 import { testimonials } from "../data/testimonials";
 
 export function Testimonials() {
@@ -27,11 +28,22 @@ export function Testimonials() {
               className="min-w-[280px] flex-1 snap-center sm:min-w-0"
             >
               <article className="flex h-full flex-col items-center gap-4 rounded-3xl border border-white/10 bg-white/[0.04] p-7 text-center transition-all duration-300 hover:-translate-y-1.5 hover:border-gold-400/30 hover:bg-white/[0.06]">
-                <img
-                  src={t.image}
-                  alt={t.name}
-                  className="h-20 w-20 rounded-full border-2 border-gold-400/40 object-cover"
-                />
+                <div className="relative">
+                  <img
+                    src={t.image}
+                    alt={t.name}
+                    className="h-20 w-20 rounded-full border-2 border-gold-400/40 object-cover"
+                  />
+                  <a
+                    href={t.instagram}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label={`Ver el video de ${t.name} en Instagram`}
+                    className="absolute -bottom-1 -right-1 flex h-7 w-7 items-center justify-center rounded-full bg-white text-ink/70 shadow-md transition-colors duration-200 hover:text-gold-600"
+                  >
+                    <InstagramIcon className="h-3.5 w-3.5" />
+                  </a>
+                </div>
                 <QuoteIcon className="h-5 w-5 text-gold-400" strokeWidth={1.5} />
                 <p className="flex-1 text-[14px] leading-relaxed text-white/80">&ldquo;{t.quote}&rdquo;</p>
                 <div>

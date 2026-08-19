@@ -3,6 +3,7 @@ import { Container } from "../components/ui/Container";
 import { SectionHeading } from "../components/ui/SectionHeading";
 import { Reveal } from "../components/ui/Reveal";
 import { Button } from "../components/ui/Button";
+import { InstagramIcon } from "../components/ui/SocialIcons";
 import { faculty } from "../data/faculty";
 
 export function Faculty() {
@@ -21,12 +22,21 @@ export function Faculty() {
           {faculty.map((member, i) => (
             <Reveal key={member.name} delay={(i % 4) * 90}>
               <article className="group flex h-full flex-col overflow-hidden rounded-3xl bg-white shadow-card transition-all duration-300 hover:-translate-y-1.5 hover:shadow-card-hover">
-                <div className="overflow-hidden bg-soft">
+                <div className="relative overflow-hidden bg-soft">
                   <img
                     src={member.image}
                     alt={member.name}
                     className="aspect-[3/4] w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
                   />
+                  <a
+                    href={member.instagram}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label={`Instagram de ${member.name}`}
+                    className="absolute right-3 top-3 flex h-8 w-8 items-center justify-center rounded-full bg-white/85 text-ink/70 backdrop-blur-sm transition-colors duration-200 hover:bg-white hover:text-gold-600"
+                  >
+                    <InstagramIcon className="h-4 w-4" />
+                  </a>
                 </div>
                 <div className="flex flex-1 flex-col gap-2 p-6">
                   <h3 className="text-[16px] font-bold leading-snug text-ink">{member.name}</h3>

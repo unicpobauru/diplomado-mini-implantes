@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { Maximize2 } from "lucide-react";
 import { Container } from "../components/ui/Container";
 import { SectionHeading } from "../components/ui/SectionHeading";
 import { Reveal } from "../components/ui/Reveal";
@@ -106,9 +107,21 @@ export function VirtualTour() {
               <h3 className="text-[17px] font-bold text-white sm:text-lg">Tour virtual UniCPO</h3>
               <p className="text-[13px] text-gold-200">Bauru, São Paulo — Brasil</p>
             </div>
-            <span className="shrink-0 rounded-full bg-gold-200 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.06em] text-ink">
-              Tour 360°
-            </span>
+            <div className="flex shrink-0 items-center gap-3">
+              <span className="hidden rounded-full bg-gold-200 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.06em] text-ink sm:inline-block">
+                Tour 360°
+              </span>
+              <a
+                href="tour.html"
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center gap-1.5 rounded-full border border-white/20 px-3.5 py-2 text-[12px] font-semibold text-white transition-colors duration-200 hover:border-gold-400 hover:text-gold-200"
+              >
+                <Maximize2 className="h-3.5 w-3.5" strokeWidth={2} />
+                <span className="hidden sm:inline">Ver en pantalla completa</span>
+                <span className="sm:hidden">Pantalla completa</span>
+              </a>
+            </div>
           </div>
           <div className="relative aspect-video w-full bg-soft">
             <iframe

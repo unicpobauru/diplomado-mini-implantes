@@ -5,6 +5,7 @@ import { SectionHeading } from "../components/ui/SectionHeading";
 import { Reveal } from "../components/ui/Reveal";
 import { Button } from "../components/ui/Button";
 import { InstagramIcon } from "../components/ui/SocialIcons";
+import { renderBold } from "../lib/renderBold";
 import { testimonials } from "../data/testimonials";
 
 export function Testimonials() {
@@ -45,7 +46,9 @@ export function Testimonials() {
                   </a>
                 </div>
                 <QuoteIcon className="h-5 w-5 text-gold-400" strokeWidth={1.5} />
-                <p className="flex-1 text-[14px] leading-relaxed text-white/80">&ldquo;{t.quote}&rdquo;</p>
+                <p className="flex-1 text-[14px] italic leading-relaxed text-white/80">
+                  &ldquo;{renderBold(t.quote, "dark")}&rdquo;
+                </p>
                 <div>
                   <p className="text-[13px] font-semibold text-gold-200">{t.name}</p>
                   <p className="text-[12px] text-white/45">{t.location}</p>

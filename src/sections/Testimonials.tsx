@@ -49,9 +49,14 @@ export function Testimonials() {
                 <p className="flex-1 text-[14px] italic leading-relaxed text-white/80">
                   &ldquo;{renderBold(t.quote, "dark")}&rdquo;
                 </p>
-                <div>
-                  <p className="text-[13px] font-semibold text-gold-200">{t.name}</p>
-                  <p className="text-[12px] text-white/45">{t.location}</p>
+                <div className="flex flex-col items-center gap-2">
+                  <div>
+                    <p className="text-[13px] font-semibold text-gold-200">{t.name}</p>
+                    <p className="text-[12px] text-white/45">{t.location}</p>
+                  </div>
+                  <span className="rounded-full bg-white/10 px-2.5 py-1 text-[10.5px] font-medium text-white/70">
+                    {t.course}
+                  </span>
                 </div>
               </article>
             </Reveal>

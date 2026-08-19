@@ -123,7 +123,7 @@ export function VirtualTour() {
               </a>
             </div>
           </div>
-          <div className="relative aspect-video w-full bg-soft">
+          <div className="relative aspect-[32/27] w-full bg-soft sm:aspect-video">
             <iframe
               ref={iframeRef}
               id="tour-embedded"

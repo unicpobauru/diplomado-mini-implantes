@@ -2,6 +2,7 @@ import { WHATSAPP_URL } from "../lib/whatsapp";
 import { Container } from "../components/ui/Container";
 import { Reveal } from "../components/ui/Reveal";
 import { Button } from "../components/ui/Button";
+import { renderBold } from "../lib/renderBold";
 
 export function Methodology() {
   return (
@@ -33,17 +34,16 @@ export function Methodology() {
             </Reveal>
             <Reveal delay={140}>
               <p className="max-w-[540px] text-[15px] leading-relaxed text-ink/65 sm:text-base">
-                Aprende a planificar, instalar y manejar casos complejos utilizando mini-implantes,
-                con foco en anclaje interradicular y extra-alveolar — incluyendo técnicas avanzadas
-                como el uso de mini-implantes en la cresta infracigomática, Buccal Shelf mandibular
-                y MARPE.
+                {renderBold(
+                  "Aprende a planificar, instalar y manejar casos complejos utilizando mini-implantes, con foco en **anclaje interradicular y extra-alveolar** — incluyendo técnicas avanzadas como el uso de mini-implantes en la **cresta infracigomática, Buccal Shelf mandibular y MARPE**."
+                )}
               </p>
             </Reveal>
             <Reveal delay={200}>
               <p className="max-w-[540px] text-[15px] leading-relaxed text-ink/65 sm:text-base">
-                Combinamos teoría detallada, demostraciones en vivo y práctica supervisada en
-                pacientes reales de la clínica ortodóncica, para que domines la inserción de
-                mini-implantes con la destreza y la confianza que exige un caso complejo.
+                {renderBold(
+                  "Combinamos teoría detallada, demostraciones en vivo y **práctica supervisada en pacientes reales** de la clínica ortodóncica, para que **domines la inserción de mini-implantes** con la destreza y la confianza que exige un caso complejo."
+                )}
               </p>
             </Reveal>
             <Reveal delay={260} className="mt-2">

@@ -3,6 +3,7 @@ export interface Module {
   title: string;
   description: string;
   tag: "Teoría" | "Práctica" | "Incluido";
+  featured?: boolean;
 }
 
 export const modules: Module[] = [
@@ -21,8 +22,9 @@ export const modules: Module[] = [
   {
     number: "T3",
     title: "Mecánica con anclaje esquelético y MARPE",
-    description: "Verticalización, distalización, cierre de agenesias y expansión palatina asistida por mini-implantes.",
+    description: "Verticalización, distalización, cierre de agenesias y expansión palatina asistida por mini-implantes — la técnica insignia del diplomado.",
     tag: "Teoría",
+    featured: true,
   },
   {
     number: "P1",
@@ -33,8 +35,9 @@ export const modules: Module[] = [
   {
     number: "P2",
     title: "Instalación en pacientes de la clínica",
-    description: "Diagnóstico, planificación y ejecución supervisada de mini-implantes en boca.",
+    description: "Diagnóstico, planificación y ejecución supervisada de mini-implantes en boca — con pacientes reales, desde el primer caso.",
     tag: "Práctica",
+    featured: true,
   },
   {
     number: "+",
@@ -42,4 +45,12 @@ export const modules: Module[] = [
     description: "Revisión de casos con el Prof. Fabricio y su equipo durante las 9 clases prácticas.",
     tag: "Incluido",
   },
+];
+
+/** Temas cubiertos por los módulos que no se muestran en detalle en la landing — el asesor los explica en la llamada. */
+export const otherTopics: string[] = [
+  "Fundamentos y elección del mini-implante",
+  "Inserción autoperforante sin micro-motores",
+  "Práctica en laboratorio con hueso artificial",
+  "Mentoría clínica directa con el Prof. Fabricio",
 ];

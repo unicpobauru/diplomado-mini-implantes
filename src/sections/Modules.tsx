@@ -1,14 +1,16 @@
-import { WHATSAPP_URL } from "../lib/whatsapp";
+import { Sparkles } from "lucide-react";
 import { Container } from "../components/ui/Container";
 import { Reveal } from "../components/ui/Reveal";
-import { Button } from "../components/ui/Button";
-import { modules } from "../data/modules";
+import { WhatsappButton } from "../components/ui/WhatsappButton";
+import { modules, otherTopics } from "../data/modules";
 
 const tagStyles: Record<string, string> = {
   "Teoría": "bg-gold-200 text-ink",
   "Práctica": "bg-gold-700 text-white",
   "Incluido": "bg-gold-500 text-white",
 };
+
+const featuredModules = modules.filter((m) => m.featured);
 
 export function Modules() {
   return (
@@ -38,47 +40,66 @@ export function Modules() {
             </Reveal>
           </div>
           <Reveal delay={160}>
-            <Button href={WHATSAPP_URL} target="_blank" rel="noreferrer" variant="secondary" size="md">
-              Hablar con un asesor académico
-            </Button>
+            <WhatsappButton variant="secondary" size="md">
+              Participa en nuestro proceso de selección
+            </WhatsappButton>
           </Reveal>
         </div>
 
-        <div className="mt-12 overflow-hidden rounded-3xl border border-line bg-white shadow-card">
-          {modules.map((module, i) => (
-            <Reveal key={module.number} delay={i * 70}>
-              <div className="group grid grid-cols-[40px_1fr] items-start gap-4 border-b border-line px-6 py-6 transition-colors duration-300 last:border-b-0 hover:bg-ink sm:grid-cols-[56px_1fr_136px] sm:items-center sm:gap-6 sm:px-8">
-                <span className="font-mono text-[13px] font-bold text-gold-600 transition-colors duration-300 group-hover:text-gold-400">
-                  {module.number}
-                </span>
-                <div className="min-w-0">
-                  <h3 className="text-[16px] font-bold leading-snug text-ink transition-colors duration-300 group-hover:text-white sm:text-[17px]">
-                    {module.title}
-                  </h3>
-                  <p className="mt-1 text-[13.5px] leading-relaxed text-ink/60 transition-colors duration-300 group-hover:text-gold-200 sm:max-w-[440px]">
-                    {module.description}
-                  </p>
+        <div className="mt-12 grid gap-6 sm:grid-cols-2">
+          {featuredModules.map((module, i) => (
+            <Reveal key={module.number} delay={i * 90}>
+              <div className="group flex h-full flex-col gap-4 rounded-3xl border border-line bg-white p-7 shadow-card transition-all duration-300 hover:-translate-y-1.5 hover:border-gold-400/40 hover:shadow-card-hover sm:p-8">
+                <div className="flex items-center justify-between">
+                  <span className="font-mono text-sm font-bold text-gold-600">{module.number}</span>
                   <span
-                    className={`mt-3 inline-block w-fit rounded-full px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.06em] sm:hidden ${tagStyles[module.tag]}`}
+                    className={`w-fit rounded-full px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.06em] ${tagStyles[module.tag]}`}
                   >
                     {module.tag}
                   </span>
                 </div>
-                <span
-                  className={`hidden w-fit rounded-full px-3 py-1 text-center text-[11px] font-semibold uppercase tracking-[0.06em] sm:block ${tagStyles[module.tag]}`}
-                >
-                  {module.tag}
-                </span>
+                <h3 className="text-xl font-bold leading-snug text-ink">{module.title}</h3>
+                <p className="text-[15px] leading-relaxed text-ink/60">{module.description}</p>
               </div>
             </Reveal>
           ))}
-          <div className="flex items-center justify-between bg-ink px-6 py-6 sm:px-8">
-            <span className="font-mono text-[12px] uppercase tracking-[0.08em] text-gold-200">
-              Clases prácticas en 5 días intensivos
-            </span>
-            <span className="text-2xl font-extrabold text-white">9 clases</span>
-          </div>
         </div>
+
+        <Reveal delay={200} className="mt-8">
+          <div className="relative overflow-hidden rounded-3xl bg-ink p-8 sm:p-10 lg:p-12">
+            <div
+              className="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full bg-gold-500/25 blur-3xl"
+              aria-hidden
+            />
+            <div className="relative flex flex-col gap-8">
+              <div className="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between sm:gap-10">
+                <div className="flex flex-col gap-3">
+                  <span className="flex h-12 w-12 items-center justify-center rounded-full bg-gold-500 text-white">
+                    <Sparkles className="h-6 w-6" strokeWidth={2} />
+                  </span>
+                  <h3
+                    className="text-balance font-extrabold leading-tight text-white"
+                    style={{ fontSize: "clamp(1.5rem, 1.2rem + 1.2vw, 2.1rem)" }}
+                  >
+                    Y mucho más.
+                  </h3>
+                  <p className="max-w-[460px] text-[15px] leading-relaxed text-white/70">
+                    {otherTopics.join(" · ")} — esto es solo un vistazo del programa completo.
+                  </p>
+                </div>
+                <div className="flex shrink-0 flex-col items-start gap-1 sm:items-end sm:text-right">
+                  <span className="text-4xl font-extrabold text-white">9 clases</span>
+                  <span className="font-mono text-[11px] uppercase tracking-[0.08em] text-gold-200">
+                    prácticas en 5 días intensivos
+                  </span>
+                </div>
+              </div>
+              <WhatsappButton variant="ghost" size="lg" className="w-fit">
+                Habla con nosotros para saber más
+              </WhatsappButton>
+            </div>
+          </div>
+        </Reveal>
       </Container>
     </section>
   );

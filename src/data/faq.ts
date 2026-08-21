@@ -33,7 +33,7 @@ export const faqItems: FaqItem[] = [
     number: "05",
     question: "¿Cuándo son las próximas fechas?",
     answer:
-      "Próximo grupo T375: 19–23 de octubre de 2026. Siguiente grupo T395: 19–23 de abril de 2027. Los grupos tienen cupos limitados — un asesor confirma la disponibilidad exacta.",
+      "Próximo grupo T375: 19–23 de octubre de 2026, con cupos limitados. El siguiente grupo aún no tiene fecha confirmada — puedes anotarte en la lista de espera y te avisamos apenas se defina.",
   },
   {
     number: "06",
@@ -45,6 +45,6 @@ export const faqItems: FaqItem[] = [
     number: "07",
     question: "¿Cómo contacto a un asesor académico?",
     answer:
-      "Toca cualquier botón \"Hablar con un asesor académico\" de esta página — te lleva directo a WhatsApp, con respuesta en menos de 24 horas.",
+      "Toca cualquier botón \"Participa en nuestro proceso de selección\" de esta página — te lleva directo a WhatsApp, con respuesta en menos de 24 horas.",
   },
 ];

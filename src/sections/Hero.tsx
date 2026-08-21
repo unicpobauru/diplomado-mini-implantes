@@ -1,7 +1,6 @@
-import { WHATSAPP_URL } from "../lib/whatsapp";
 import { CheckCircle2, MessageCircle } from "lucide-react";
 import { Container } from "../components/ui/Container";
-import { Button } from "../components/ui/Button";
+import { WhatsappButton } from "../components/ui/WhatsappButton";
 import { trustPoints } from "../data/trustPoints";
 
 export function Hero() {
@@ -40,9 +39,9 @@ export function Hero() {
               prácticas, pacientes reales y la mentoría del Prof. Fabricio Pinelli Valarelli,
               referencia en Ortodoncia en Brasil y América Latina.
             </p>
-            <Button href={WHATSAPP_URL} target="_blank" rel="noreferrer" variant="primary" size="lg" className="mt-2">
-              Hablar con un asesor académico
-            </Button>
+            <WhatsappButton variant="primary" size="lg" className="mt-2">
+              Participa en nuestro proceso de selección
+            </WhatsappButton>
             <span className="text-[12px] text-white/50">
               Respuesta por WhatsApp en menos de 24h · Cupos limitados por grupo
             </span>
@@ -69,6 +68,19 @@ export function Hero() {
                   </li>
                 ))}
               </ul>
+              <div className="mt-1 flex items-center gap-4 rounded-2xl border border-white/10 bg-white/5 px-5 py-4">
+                <img
+                  src="images/selo-mec.png"
+                  alt="Selo MEC"
+                  className="h-12 w-12 shrink-0 object-contain"
+                />
+                <div className="flex flex-col gap-0.5">
+                  <span className="text-[13.5px] font-bold text-white">Certificación MEC</span>
+                  <span className="text-[12px] leading-snug text-white/55">
+                    Reconocimiento oficial del Ministério da Educação de Brasil
+                  </span>
+                </div>
+              </div>
             </div>
 
             <div className="flex flex-col items-center justify-center gap-6 border-t border-white/10 bg-white/[0.03] p-8 text-center sm:p-10 lg:border-l lg:border-t-0 lg:p-14">
@@ -81,16 +93,16 @@ export function Hero() {
                   <MessageCircle className="h-6 w-6" strokeWidth={1.75} />
                 </span>
                 <h3 className="text-2xl font-extrabold leading-tight text-white sm:text-3xl">
-                  Habla con un asesor académico
+                  Participa en nuestro proceso de selección
                 </h3>
               </div>
               <p className="max-w-xs text-[14px] leading-relaxed text-white/70">
                 Sin formularios: escríbenos por WhatsApp y resolvemos tus dudas sobre fechas,
                 inversión y opciones de pago.
               </p>
-              <Button href={WHATSAPP_URL} target="_blank" rel="noreferrer" variant="primary" size="lg" className="w-full">
+              <WhatsappButton variant="ghost" size="lg" className="w-full">
                 Hablar por WhatsApp
-              </Button>
+              </WhatsappButton>
               <span className="text-[11px] text-white/40">
                 Respuesta en menos de 24h · Cupos limitados por grupo
               </span>

@@ -1,7 +1,6 @@
-import { WHATSAPP_URL } from "../lib/whatsapp";
 import { Container } from "../components/ui/Container";
 import { Reveal } from "../components/ui/Reveal";
-import { Button } from "../components/ui/Button";
+import { WhatsappButton } from "../components/ui/WhatsappButton";
 import { renderBold } from "../lib/renderBold";
 
 export function Methodology() {
@@ -47,9 +46,9 @@ export function Methodology() {
               </p>
             </Reveal>
             <Reveal delay={260} className="mt-2">
-              <Button href={WHATSAPP_URL} target="_blank" rel="noreferrer" variant="secondary" size="lg">
-                Hablar con un asesor académico
-              </Button>
+              <WhatsappButton variant="secondary" size="lg">
+                Participa en nuestro proceso de selección
+              </WhatsappButton>
             </Reveal>
           </div>
         </div>

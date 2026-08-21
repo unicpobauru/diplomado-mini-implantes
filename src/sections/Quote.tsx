@@ -21,7 +21,7 @@ export function Quote() {
             </p>
             <footer className="mt-7 flex flex-col items-center gap-1">
               <span className="text-[15px] font-bold text-gold-400">Prof. Fabricio Pinelli Valarelli</span>
-              <span className="text-[13px] text-white/50">Coordinador Académico — UniCPO</span>
+              <span className="text-[13px] text-white/50">Dr. y Mg. en Ortodoncia — USP · Postdoctorado University of Toronto</span>
             </footer>
           </blockquote>
         </Reveal>

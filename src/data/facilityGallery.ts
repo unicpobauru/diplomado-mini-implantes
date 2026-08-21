@@ -21,4 +21,6 @@ export const facilityGallery: GalleryImage[] = [
   { src: "images/facility-07.jpg", alt: "Laboratorio de anatomía — UniCPO", label: "FACILITY_IMAGE_07" },
   { src: "images/facility-08.jpg", alt: "Modelo anatómico de estudio — UniCPO", label: "FACILITY_IMAGE_08" },
   { src: "images/facility-09.jpg", alt: "Área de convivencia — UniCPO", label: "FACILITY_IMAGE_09" },
+  { src: "images/facility-10.jpg", alt: "Instalaciones de UniCPO en Bauru", label: "FACILITY_IMAGE_10" },
+  { src: "images/facility-11.jpg", alt: "Instalaciones de UniCPO en Bauru", label: "FACILITY_IMAGE_11" },
 ];

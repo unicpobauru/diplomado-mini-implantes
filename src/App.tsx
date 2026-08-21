@@ -1,14 +1,16 @@
 import { Header } from "./sections/Header";
 import { Hero } from "./sections/Hero";
-import { Quote } from "./sections/Quote";
 import { About } from "./sections/About";
 import { Stats } from "./sections/Stats";
 import { VirtualTour } from "./sections/VirtualTour";
 import { Differentials } from "./sections/Differentials";
-import { Methodology } from "./sections/Methodology";
+// Methodology: ocultada a pedido de la dirección — el componente sigue en
+// src/sections/Methodology.tsx por si se reactiva más adelante.
+// import { Methodology } from "./sections/Methodology";
 import { CoordinatorVideo } from "./sections/CoordinatorVideo";
 import { Modules } from "./sections/Modules";
 import { Faculty } from "./sections/Faculty";
+import { Quote } from "./sections/Quote";
 import { Testimonials } from "./sections/Testimonials";
 import { Facility } from "./sections/Facility";
 import { FAQ } from "./sections/FAQ";
@@ -21,15 +23,14 @@ function App() {
       <Header />
       <main>
         <Hero />
-        <Quote />
+        <Differentials />
         <About />
         <Stats />
         <VirtualTour />
-        <Differentials />
         <CoordinatorVideo />
-        <Methodology />
         <Modules />
         <Faculty />
+        <Quote />
         <Testimonials />
         <Facility />
         <FAQ />

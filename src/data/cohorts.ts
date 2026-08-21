@@ -16,12 +16,4 @@ export const cohorts: Cohort[] = [
     year: "2026",
     detail: "9 clases prácticas · Bauru, Brasil",
   },
-  {
-    code: "T395",
-    label: "Siguiente grupo",
-    dateRange: "19–23",
-    month: "Abril",
-    year: "2027",
-    detail: "9 clases prácticas · Bauru, Brasil",
-  },
 ];

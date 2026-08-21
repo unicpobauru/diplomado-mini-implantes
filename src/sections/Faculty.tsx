@@ -1,8 +1,7 @@
-import { WHATSAPP_URL } from "../lib/whatsapp";
 import { Container } from "../components/ui/Container";
 import { SectionHeading } from "../components/ui/SectionHeading";
 import { Reveal } from "../components/ui/Reveal";
-import { Button } from "../components/ui/Button";
+import { WhatsappButton } from "../components/ui/WhatsappButton";
 import { InstagramIcon } from "../components/ui/SocialIcons";
 import { faculty } from "../data/faculty";
 
@@ -51,9 +50,9 @@ export function Faculty() {
         </div>
 
         <Reveal delay={260} className="mt-14 flex justify-center">
-          <Button href={WHATSAPP_URL} target="_blank" rel="noreferrer" variant="primary" size="lg">
-            Hablar con un asesor académico
-          </Button>
+          <WhatsappButton variant="primary" size="lg">
+            Participa en nuestro proceso de selección
+          </WhatsappButton>
         </Reveal>
       </Container>
     </section>

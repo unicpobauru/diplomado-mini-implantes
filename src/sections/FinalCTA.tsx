@@ -1,8 +1,8 @@
 import { WHATSAPP_URL } from "../lib/whatsapp";
-import { CalendarDays } from "lucide-react";
+import { CalendarDays, Clock3 } from "lucide-react";
 import { Container } from "../components/ui/Container";
 import { Reveal } from "../components/ui/Reveal";
-import { Button } from "../components/ui/Button";
+import { WhatsappButton } from "../components/ui/WhatsappButton";
 import { cohorts } from "../data/cohorts";
 
 export function FinalCTA() {
@@ -54,12 +54,35 @@ export function FinalCTA() {
                 </a>
               </Reveal>
             ))}
+            <Reveal delay={230}>
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noreferrer"
+                className="group flex h-full flex-col gap-3 rounded-2xl border border-white/15 bg-white/5 p-6 text-left transition-all duration-300 hover:-translate-y-1 hover:border-gold-400/40 hover:bg-white/10"
+              >
+                <div className="flex items-center justify-between">
+                  <span className="rounded-full bg-gold-200 px-3 py-1 text-[10.5px] font-semibold uppercase tracking-[0.06em] text-ink">
+                    Cupos por confirmar
+                  </span>
+                  <Clock3 className="h-5 w-5 text-gold-400" strokeWidth={1.75} />
+                </div>
+                <div>
+                  <p className="text-2xl font-extrabold leading-tight text-white">
+                    Quiero entrar a la lista de espera
+                  </p>
+                </div>
+                <p className="text-[12.5px] text-white/55">
+                  Te avisamos por WhatsApp apenas se confirme la fecha del siguiente grupo.
+                </p>
+              </a>
+            </Reveal>
           </div>
 
           <Reveal delay={320} className="mt-4">
-            <Button href={WHATSAPP_URL} target="_blank" rel="noreferrer" variant="primary" size="lg">
-              Quiero hablar con un asesor
-            </Button>
+            <WhatsappButton variant="ghost" size="lg">
+              Quiero participar en el proceso de selección
+            </WhatsappButton>
           </Reveal>
         </div>
       </Container>

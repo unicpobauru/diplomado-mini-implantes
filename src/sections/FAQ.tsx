@@ -1,8 +1,7 @@
-import { WHATSAPP_URL } from "../lib/whatsapp";
 import { useState } from "react";
 import { Container } from "../components/ui/Container";
 import { Reveal } from "../components/ui/Reveal";
-import { Button } from "../components/ui/Button";
+import { WhatsappButton } from "../components/ui/WhatsappButton";
 import { AccordionItem } from "../components/ui/AccordionItem";
 import { faqItems } from "../data/faq";
 
@@ -25,14 +24,14 @@ export function FAQ() {
                 className="text-balance font-extrabold leading-[1.12] tracking-[-0.01em] text-ink"
                 style={{ fontSize: "clamp(1.75rem, 1.35rem + 1.8vw, 2.75rem)" }}
               >
-                Antes de hablar con un asesor
+                Antes de participar en nuestro proceso de selección
               </h2>
             </Reveal>
           </div>
           <Reveal delay={140}>
-            <Button href={WHATSAPP_URL} target="_blank" rel="noreferrer" variant="secondary" size="md">
-              Hablar con un asesor académico
-            </Button>
+            <WhatsappButton variant="secondary" size="md">
+              Participa en nuestro proceso de selección
+            </WhatsappButton>
           </Reveal>
         </div>
 

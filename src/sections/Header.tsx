@@ -1,8 +1,7 @@
-import { WHATSAPP_URL } from "../lib/whatsapp";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Container } from "../components/ui/Container";
-import { Button } from "../components/ui/Button";
+import { WhatsappButton } from "../components/ui/WhatsappButton";
 import { navLinks } from "../data/nav";
 import { useScrolled } from "../hooks/useScrolled";
 
@@ -44,9 +43,9 @@ export function Header() {
           </nav>
 
           <div className="hidden lg:block">
-            <Button href={WHATSAPP_URL} target="_blank" rel="noreferrer" variant="primary" size="md">
-              Hablar con un asesor
-            </Button>
+            <WhatsappButton variant="primary" size="md">
+              Participa en nuestro proceso de selección
+            </WhatsappButton>
           </div>
 
           <button
@@ -80,9 +79,9 @@ export function Header() {
                 {link.label}
               </a>
             ))}
-            <Button href={WHATSAPP_URL} target="_blank" rel="noreferrer" variant="primary" size="md" className="mt-3 w-full" onClick={() => setMenuOpen(false)}>
-              Hablar con un asesor
-            </Button>
+            <WhatsappButton variant="primary" size="md" className="mt-3 w-full" onClick={() => setMenuOpen(false)}>
+              Participa en nuestro proceso de selección
+            </WhatsappButton>
           </nav>
         </Container>
       </div>

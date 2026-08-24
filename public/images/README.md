@@ -1,6 +1,6 @@
 # Cómo cambiar las fotos del carrusel ("Nuestra estructura")
 
-Todas siguen el mismo patrón: **`facility-01.jpg` hasta `facility-11.jpg`**.
+Todas siguen el mismo patrón: **`facility-01.jpg` hasta `facility-16.jpg`**.
 Guarda el archivo con ese nombre exacto en esta carpeta (`public/images/`) y
 la foto aparece sola en el sitio — no hace falta avisarme ni tocar código.
 
@@ -15,13 +15,18 @@ la foto aparece sola en el sitio — no hace falta avisarme ni tocar código.
 | `facility-07.jpg` | 7ª foto |
 | `facility-08.jpg` | 8ª foto |
 | `facility-09.jpg` | 9ª foto |
-| `facility-10.jpg` | 10ª foto (nueva) |
-| `facility-11.jpg` | 11ª foto (nueva) |
+| `facility-10.jpg` | 10ª foto — Recepción del Grupo UniCPO |
+| `facility-11.jpg` | 11ª foto — Clase de Cefalometría Clínica |
+| `facility-12.jpg` | 12ª foto — Sala de clases |
+| `facility-13.jpg` | 13ª foto — Práctica de laboratorio |
+| `facility-14.jpg` | 14ª foto — Clínica con sillones equipados |
+| `facility-15.jpg` | 15ª foto — Sala de estudio de anatomía |
+| `facility-16.jpg` | 16ª foto — Sala de espera |
 
 Para **reemplazar** una foto, guarda el archivo nuevo con el mismo nombre
 (por ejemplo, `facility-05.jpg`) y confirma "sustituir" cuando Windows
-pregunte. Para **agregar una décimo segunda foto**, avísame — solo hay que
-sumar una línea en el código para el espacio `facility-12.jpg`.
+pregunte. Para **agregar una foto nueva**, avísame — solo hay que sumar una
+línea en el código para el espacio `facility-17.jpg`.
 
 ## Cómo llegar a esta carpeta en Windows
 

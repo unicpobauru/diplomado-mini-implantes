@@ -21,11 +21,4 @@ export const facilityGallery: GalleryImage[] = [
   { src: "images/facility-07.jpg", alt: "Laboratorio de anatomía — UniCPO", label: "FACILITY_IMAGE_07" },
   { src: "images/facility-08.jpg", alt: "Modelo anatómico de estudio — UniCPO", label: "FACILITY_IMAGE_08" },
   { src: "images/facility-09.jpg", alt: "Área de convivencia — UniCPO", label: "FACILITY_IMAGE_09" },
-  { src: "images/facility-10.jpg", alt: "Recepción del Grupo UniCPO en Bauru", label: "FACILITY_IMAGE_10" },
-  { src: "images/facility-11.jpg", alt: "Clase teórica de Cefalometría Clínica — UniCPO", label: "FACILITY_IMAGE_11" },
-  { src: "images/facility-12.jpg", alt: "Sala de clases — UniCPO", label: "FACILITY_IMAGE_12" },
-  { src: "images/facility-13.jpg", alt: "Práctica de laboratorio con alumnos — UniCPO", label: "FACILITY_IMAGE_13" },
-  { src: "images/facility-14.jpg", alt: "Clínica de UniCPO con sillones equipados", label: "FACILITY_IMAGE_14" },
-  { src: "images/facility-15.jpg", alt: "Sala de estudio de anatomía — UniCPO", label: "FACILITY_IMAGE_15" },
-  { src: "images/facility-16.jpg", alt: "Sala de espera de UniCPO en Bauru", label: "FACILITY_IMAGE_16" },
 ];

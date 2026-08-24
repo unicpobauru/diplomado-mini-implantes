@@ -46,24 +46,33 @@ export function Modules() {
           </Reveal>
         </div>
 
-        <div className="mt-12 grid gap-6 sm:grid-cols-2">
-          {featuredModules.map((module, i) => (
-            <Reveal key={module.number} delay={i * 90}>
-              <div className="group flex h-full flex-col gap-4 rounded-3xl border border-line bg-white p-7 shadow-card transition-all duration-300 hover:-translate-y-1.5 hover:border-gold-400/40 hover:shadow-card-hover sm:p-8">
-                <div className="flex items-center justify-between">
-                  <span className="font-mono text-sm font-bold text-gold-600">{module.number}</span>
+        <Reveal delay={100} className="mt-12">
+          <div className="rounded-3xl border border-line bg-white p-7 shadow-card sm:p-8 lg:p-10">
+            <span className="eyebrow">
+              <span className="h-px w-6 bg-gold-500" aria-hidden />
+              Un adelanto de lo que vas a aprender
+            </span>
+            <div className="mt-6 grid gap-8 sm:grid-cols-2 sm:gap-10">
+              {featuredModules.map((module, i) => (
+                <div
+                  key={module.number}
+                  className={`flex flex-col gap-3 ${i === 0 ? "sm:border-r sm:border-line sm:pr-10" : ""}`}
+                >
                   <span
                     className={`w-fit rounded-full px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.06em] ${tagStyles[module.tag]}`}
                   >
-                    {module.tag}
+                    Muestra · {module.tag}
                   </span>
+                  <h3 className="text-xl font-bold leading-snug text-ink">{module.title}</h3>
+                  <p className="text-[15px] leading-relaxed text-ink/60">{module.description}</p>
                 </div>
-                <h3 className="text-xl font-bold leading-snug text-ink">{module.title}</h3>
-                <p className="text-[15px] leading-relaxed text-ink/60">{module.description}</p>
-              </div>
-            </Reveal>
-          ))}
-        </div>
+              ))}
+            </div>
+            <p className="mt-7 border-t border-dashed border-line pt-5 text-[13px] font-semibold text-ink/45">
+              Esto es apenas una probadita — solo 2 de los 6 módulos del programa completo. ↓
+            </p>
+          </div>
+        </Reveal>
 
         <Reveal delay={200} className="mt-8">
           <div className="relative overflow-hidden rounded-3xl bg-ink p-8 sm:p-10 lg:p-12">

@@ -22,7 +22,7 @@ export function Hero() {
           <img
             src="images/hero-miniimplantes.jpg"
             alt="Anclaje esquelético con mini-implantes — ilustración clínica"
-            className="h-full min-h-[640px] w-full object-cover sm:min-h-[720px] lg:min-h-[860px]"
+            className="h-full min-h-[640px] w-full object-cover object-[78%_center] sm:min-h-[720px] lg:min-h-[860px] lg:object-center"
           />
           <div
             className="absolute inset-0"
@@ -41,13 +41,19 @@ export function Hero() {
             </span>
             <h1
               className="text-balance font-extrabold leading-[1.05] tracking-[-0.025em] text-white"
-              style={{ fontSize: "clamp(2.5rem, 1.7rem + 3.6vw, 4.25rem)" }}
+              style={{
+                fontSize: "clamp(2.5rem, 1.7rem + 3.6vw, 4.25rem)",
+                textShadow: "0 2px 16px rgba(0,0,0,0.45), 0 1px 3px rgba(0,0,0,0.5)",
+              }}
             >
               Domina el{" "}
               <span className="text-gold-400">anclaje esquelético</span> y deja de
               derivar los casos que podrías resolver tú mismo.
             </h1>
-            <p className="max-w-[600px] text-[17px] leading-relaxed text-white/80 sm:text-xl">
+            <p
+              className="max-w-[600px] text-[17px] leading-relaxed text-white/80 sm:text-xl"
+              style={{ textShadow: "0 2px 10px rgba(0,0,0,0.45)" }}
+            >
               {renderBold(
                 "Diplomado presencial e intensivo de 5 días en Bauru, Brasil — con **pacientes reales**, tecnología de punta y la mentoría directa del Prof. Fabricio Pinelli Valarelli, referencia en Ortodoncia en Brasil y América Latina.",
                 "dark"

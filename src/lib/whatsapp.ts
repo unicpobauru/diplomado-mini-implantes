@@ -4,4 +4,4 @@
  * atención de la campaña — no removerlo sin avisar al equipo comercial.
  */
 export const WHATSAPP_URL =
-  "https://wa.me/5514997992312?text=%5BLANDINGPAGE-MINIIMPL%5D%20-%20Este%20es%20su%20c%C3%B3digo%20de%20atenci%C3%B3n%2C%20por%20favor%20no%20lo%20borre.";
+  "https://wa.me/5514997992312?text=%5BLP-MINI%5D%20-%20Este%20es%20su%20c%C3%B3digo%20de%20atenci%C3%B3n%2C%20por%20favor%20no%20lo%20borre";
